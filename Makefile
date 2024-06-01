@@ -1,8 +1,15 @@
-local-up:
+
+local:
 	docker compose up -d;
 
 infra-down:
 	docker compose down;
 
-docker-clean-up:
-	docker rm $(docker ps -aq) -f	
+go-run:
+	go run main.go
+
+go-test:
+	go test ./... -v	
+
+local-up: local
+	curl http://localhost:8080/01153000

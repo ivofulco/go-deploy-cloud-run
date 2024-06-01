@@ -4,6 +4,9 @@
 - [Labs - Deploy Cloud Run](#labs---deploy-cloud-run)
 - [Resolução](#resolução)
   - [Executando local](#executando-local)
+    - [Docker compose + makefile](#docker-compose--makefile)
+    - [Go](#go)
+      - [Tests](#tests)
   - [Endereço Google Cloud Run](#endereço-google-cloud-run)
 
 ---
@@ -54,15 +57,31 @@ _Entrega:_
 
 # Resolução
 
-Foi criado um arquivo Makefile para facilitar o processo de instalação do banco de dados via Docker, mas também é possível executar manualmente para visualizar o programa funcionando. 
+Foi criado um arquivo Makefile para facilitar o processo via Docker, mas também é possível executar manualmente para visualizar o programa funcionando. 
 
 ---
 
 ## Executando local
+
+### Docker compose + makefile
+
 ```
 make local-up
 ```
 ---
+
+### Go
+
+```
+go run main.go
+```
+
+#### Tests
+
+```
+go test ./... -v
+```
+
 
 ## Endereço Google Cloud Run
 
